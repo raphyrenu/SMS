@@ -15,7 +15,7 @@
     <div id="this">
         <div class="profile">
             <img src="./nurse.jpg" alt="Profile" class='w-30 h-30 rounded-full'>
-            <h3>Dr.nurse</h3>
+            <h3 style="background-color: blue;">Dr.nurse</h3>
             <span>centrifuger</span>
         </div>
         <div>
