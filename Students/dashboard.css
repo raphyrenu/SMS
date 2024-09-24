@@ -1,0 +1,146 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+* {
+  transition: hover 2s;
+}
+
+.sidebar {
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  width: 250px;
+}
+.sidebar-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  color: #020b13;
+  background-color: #fff;
+  padding: 5px 10px;
+
+}
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav a {
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+
+  border-radius: 5px;
+}
+.sidebar-nav a:hover {
+  background-color: #020b13; /* Darker blue on hover */
+}
+
+.dashboard {
+  padding: 20px;
+  margin-left: 200px;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.dashboard-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  flex-direction: row;
+  padding-top: 90px;
+  margin-left: 30px;
+}
+.dashboard-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 90px;
+  margin-top: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* width: calc(33.33% - 20px); */
+  /* margin-bottom: 20px; */
+  border: 2px solid black;
+}
+
+.button {
+  background-color: #031520;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: #1f6391;
+}
+
+img {
+  width: 240px !important;
+  height: 150px !important;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+/* @media screen and (max-width: 1200px) {
+  .dashboard-items {
+    flex-direction: column;
+    align-items: center;
+    width: 80% !important;
+    position: relative !important;
+    right: 0;
+    top: 0;
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden !important;
+  }
+  body {
+    background: #000;
+  }
+  .sidebar {
+    display: none;
+  }
+  .dashboard {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #fff !important;
+    width: 100vw;
+
+    top: 0 !important;
+    position: absolute;
+  }
+  img {
+    width: 400px !important;
+    height: 400px !important;
+  }
+} */
+
+@media screen and (max-width: 1500px) {
+  .dashboard-items {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 90px;
+  }
+  .dashboard-item {
+    width: 80%;
+  }
+  img {
+    width: 300px !important;
+    height: 200px !important;
+  }
+}

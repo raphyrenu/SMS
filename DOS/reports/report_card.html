@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any additional CSS styles here */
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            padding: 10px;
+            width: 100%;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: rgb(206, 177, 234);
+        }
+    </style>
+</head>
+<body>
+    <h2>Hello nelson, there is an error in the system Card</h2>
+    <div id="reportCard"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch marks for the student and display them in the report card
+            fetch("get_marks.php")
+                .then(response => response.json())
+                .then(data => {
+                    let reportCard = document.getElementById("reportCard");
+                    reportCard.innerHTML = `
+                        <h3>Student ID: ${data.studentId}</h3>
+                        <table>
+                            <tr>
+                                <th>COURSES</th>
+                                <th>CAT Marks</th>
+                                <th>Exam Marks</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td>Discipline</td>
+                                <td>${data.catMarks}</td>
+                                <td>${data.examMarks}</td>
+                                <td>${parseInt(data.catMarks) + parseInt(data.examMarks)}</td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td>${data.catMarks}</td>
+                                <td>${data.examMarks}</td>
+                                <td>${parseInt(data.catMarks) + parseInt(data.examMarks)}</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>${parseInt(data.catMarks) * 2}</td>
+                                <td>${parseInt(data.examMarks) * 2}</td>
+                                <td>${(parseInt(data.catMarks) + parseInt(data.examMarks)) * 2}</td>
+                            </tr>
+                            <tr>
+                                <td>Percentage</td>
+                                <td colspan="3">${((parseInt(data.catMarks) + parseInt(data.examMarks)) * 2) / 4}%</td>
+                            </tr>
+                            <tr>
+                                <td>Place</td>
+                                <td colspan="3">_______</td>
+                            </tr>
+                            <tr>
+                                <td>Signature of parents</td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Signature of the class's advisor</td>
+                                <td colspan="3"></td>
+                            </tr>
+                        </table>
+                    `;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

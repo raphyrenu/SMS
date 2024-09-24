@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Div</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 2000px;
+        }
+        .big-div {
+            width: 400px;
+            height: 250px;
+            background: linear-gradient(45deg, #ff6b6b, #556270);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        .big-div img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="big-div" onclick="location.href='https://example.com/physics';">
+            <img src="phy.png" alt="Physics">
+            Physics
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/math';">
+            <img src="maths.jpg" alt="Mathematics">
+            Mathematics
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/chemistry';">
+            <img src="eng.jpg" alt="english">
+            Chemistry
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/biology';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Biology-symbol.png" alt="Biology">
+            Biology
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/history';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/History-symbol.png" alt="History">
+            History
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/geography';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Geography-symbol.png" alt="Geography">
+            Geography
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/english';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/English-symbol.png" alt="English">
+            English
+        </div>
+        <div class="big-div" onclick="location.href='https://example.com/computerscience';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Computer-science-symbol.png" alt="Computer Science">
+            Computer Science
+        </div>
+        <!-- <div class="big-div" onclick="location.href='https://example.com/art';">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Art-symbol.png" alt="Art">
+            Art
+        </div> -->
+    </div>
+</body>
+</html>

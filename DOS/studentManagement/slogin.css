@@ -1,0 +1,22 @@
+.error{
+    color: red;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    padding: 10px 20px;
+    background-color: #020b13;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+body{
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont {
+    background-color: #020b13;
+}
